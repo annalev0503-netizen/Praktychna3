@@ -1,5 +1,5 @@
 #pragma once
-const int n = 2, m = 3;
+const int n = 2, m = 3;// 2 ?????
 int a[n][m], i, j;
 
 namespace Project2 {
