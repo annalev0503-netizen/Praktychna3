@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 const int n = 2, m = 3;// 2 ?????
 int a[n][m], i, j;
 
@@ -53,6 +53,8 @@ namespace Project2 {
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::TextBox^ textBox2;
 	private: System::Windows::Forms::TextBox^ textBox3;
+	private: System::Windows::Forms::CheckBox^ checkBox4;
+	private: System::Windows::Forms::TextBox^ textBox4;
 
 	private:
 		/// <summary>
@@ -76,6 +78,7 @@ namespace Project2 {
 			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->checkBox4 = (gcnew System::Windows::Forms::CheckBox());
 			this->checkBox3 = (gcnew System::Windows::Forms::CheckBox());
 			this->checkBox2 = (gcnew System::Windows::Forms::CheckBox());
 			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
@@ -83,6 +86,7 @@ namespace Project2 {
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->panel1->SuspendLayout();
@@ -94,12 +98,13 @@ namespace Project2 {
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->ColumnHeadersVisible = false;
 			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(1) { this->Column1 });
-			this->dataGridView1->Location = System::Drawing::Point(48, 0);
+			this->dataGridView1->Location = System::Drawing::Point(43, 0);
+			this->dataGridView1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersVisible = false;
 			this->dataGridView1->RowHeadersWidth = 62;
 			this->dataGridView1->RowTemplate->Height = 28;
-			this->dataGridView1->Size = System::Drawing::Size(160, 453);
+			this->dataGridView1->Size = System::Drawing::Size(142, 362);
 			this->dataGridView1->TabIndex = 0;
 			// 
 			// Column1
@@ -111,9 +116,10 @@ namespace Project2 {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(243, 160);
+			this->button1->Location = System::Drawing::Point(216, 128);
+			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(157, 90);
+			this->button1->Size = System::Drawing::Size(140, 72);
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"button1";
 			this->button1->UseVisualStyleBackColor = true;
@@ -122,9 +128,9 @@ namespace Project2 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(305, 280);
+			this->label1->Location = System::Drawing::Point(271, 224);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(0, 20);
+			this->label1->Size = System::Drawing::Size(0, 16);
 			this->label1->TabIndex = 2;
 			// 
 			// dataGridView2
@@ -136,12 +142,13 @@ namespace Project2 {
 				this->Column2,
 					this->Column3, this->Column4
 			});
-			this->dataGridView2->Location = System::Drawing::Point(471, 15);
+			this->dataGridView2->Location = System::Drawing::Point(419, 12);
+			this->dataGridView2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->dataGridView2->Name = L"dataGridView2";
 			this->dataGridView2->RowHeadersVisible = false;
 			this->dataGridView2->RowHeadersWidth = 62;
 			this->dataGridView2->RowTemplate->Height = 28;
-			this->dataGridView2->Size = System::Drawing::Size(473, 235);
+			this->dataGridView2->Size = System::Drawing::Size(420, 188);
 			this->dataGridView2->TabIndex = 3;
 			// 
 			// Column2
@@ -168,52 +175,70 @@ namespace Project2 {
 			// panel1
 			// 
 			this->panel1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->panel1->Controls->Add(this->checkBox4);
 			this->panel1->Controls->Add(this->checkBox3);
 			this->panel1->Controls->Add(this->checkBox2);
 			this->panel1->Controls->Add(this->checkBox1);
-			this->panel1->Location = System::Drawing::Point(508, 280);
+			this->panel1->Location = System::Drawing::Point(552, 224);
+			this->panel1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(284, 138);
+			this->panel1->Size = System::Drawing::Size(153, 138);
 			this->panel1->TabIndex = 4;
+			// 
+			// checkBox4
+			// 
+			this->checkBox4->AutoSize = true;
+			this->checkBox4->Location = System::Drawing::Point(36, 107);
+			this->checkBox4->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->checkBox4->Name = L"checkBox4";
+			this->checkBox4->Size = System::Drawing::Size(86, 20);
+			this->checkBox4->TabIndex = 3;
+			this->checkBox4->Text = L"Ð¡ÐµÑ€ÐµÐ´Ð½Ñ”";
+			this->checkBox4->UseVisualStyleBackColor = true;
+			this->checkBox4->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBox4_CheckedChanged);
 			// 
 			// checkBox3
 			// 
 			this->checkBox3->AutoSize = true;
-			this->checkBox3->Location = System::Drawing::Point(41, 96);
+			this->checkBox3->Location = System::Drawing::Point(36, 77);
+			this->checkBox3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->checkBox3->Name = L"checkBox3";
-			this->checkBox3->Size = System::Drawing::Size(73, 24);
+			this->checkBox3->Size = System::Drawing::Size(63, 20);
 			this->checkBox3->TabIndex = 2;
-			this->checkBox3->Text = L"Ñóìà";
+			this->checkBox3->Text = L"Ð¡ÑƒÐ¼Ð°";
 			this->checkBox3->UseVisualStyleBackColor = true;
 			this->checkBox3->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBox3_CheckedChanged);
 			// 
 			// checkBox2
 			// 
 			this->checkBox2->AutoSize = true;
-			this->checkBox2->Location = System::Drawing::Point(41, 55);
+			this->checkBox2->Location = System::Drawing::Point(36, 44);
+			this->checkBox2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->checkBox2->Name = L"checkBox2";
-			this->checkBox2->Size = System::Drawing::Size(129, 24);
+			this->checkBox2->Size = System::Drawing::Size(88, 20);
 			this->checkBox2->TabIndex = 1;
-			this->checkBox2->Text = L"Ì³í³ìàëüíèé";
+			this->checkBox2->Text = L"ÃŒÂ³Ã­Â³Ã¬Ã Ã«Ã¼Ã­Ã¨Ã©";
 			this->checkBox2->UseVisualStyleBackColor = true;
 			this->checkBox2->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBox2_CheckedChanged);
 			// 
 			// checkBox1
 			// 
 			this->checkBox1->AutoSize = true;
-			this->checkBox1->Location = System::Drawing::Point(41, 13);
+			this->checkBox1->Location = System::Drawing::Point(36, 10);
+			this->checkBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->checkBox1->Name = L"checkBox1";
-			this->checkBox1->Size = System::Drawing::Size(148, 24);
+			this->checkBox1->Size = System::Drawing::Size(108, 20);
 			this->checkBox1->TabIndex = 0;
-			this->checkBox1->Text = L"Ìàêñèìàëüíèé";
+			this->checkBox1->Text = L"ÃŒÃ ÃªÃ±Ã¨Ã¬Ã Ã«Ã¼Ã­Ã¨Ã©";
 			this->checkBox1->UseVisualStyleBackColor = true;
 			this->checkBox1->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBox1_CheckedChanged);
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(619, 439);
+			this->button2->Location = System::Drawing::Point(552, 376);
+			this->button2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(268, 61);
+			this->button2->Size = System::Drawing::Size(238, 49);
 			this->button2->TabIndex = 5;
 			this->button2->Text = L"button2";
 			this->button2->UseVisualStyleBackColor = true;
@@ -221,30 +246,42 @@ namespace Project2 {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(820, 293);
+			this->textBox1->Location = System::Drawing::Point(729, 234);
+			this->textBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(100, 26);
+			this->textBox1->Size = System::Drawing::Size(89, 22);
 			this->textBox1->TabIndex = 6;
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(820, 337);
+			this->textBox2->Location = System::Drawing::Point(729, 270);
+			this->textBox2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(100, 26);
+			this->textBox2->Size = System::Drawing::Size(89, 22);
 			this->textBox2->TabIndex = 7;
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(820, 378);
+			this->textBox3->Location = System::Drawing::Point(729, 302);
+			this->textBox3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(100, 26);
+			this->textBox3->Size = System::Drawing::Size(89, 22);
 			this->textBox3->TabIndex = 8;
+			// 
+			// textBox4
+			// 
+			this->textBox4->Location = System::Drawing::Point(729, 333);
+			this->textBox4->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(89, 22);
+			this->textBox4->TabIndex = 9;
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1143, 571);
+			this->ClientSize = System::Drawing::Size(1016, 457);
+			this->Controls->Add(this->textBox4);
 			this->Controls->Add(this->textBox3);
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->textBox1);
@@ -254,6 +291,7 @@ namespace Project2 {
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->dataGridView1);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
@@ -352,6 +390,25 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 			dataGridView2[j, i]->Value = Convert::ToString(rnd->Next(50));
 		}
 
+}
+private: System::Void checkBox4_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < m; j++)
+		{
+			a[i][j] = Convert::ToInt32(dataGridView2[j, i]->Value);
+		}
+	int sum = 0;
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < m; j++)
+			if (checkBox4->Checked == true)
+			{
+				{
+					sum += a[i][j];
+				}
+
+			}
+	const double average = (double)sum / (n + m);
+	textBox4->Text = average.ToString();
 }
 };
 }
